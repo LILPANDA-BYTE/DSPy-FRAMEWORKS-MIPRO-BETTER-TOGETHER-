@@ -143,22 +143,6 @@ jupyter notebook
 * In your browser, open: `DSPy FRAMEWORKS (MIPRO & BETTER TOGETHER) .ipynb`
 * Run all cells in order: select a cell and press **Shift + Enter**.
 
-#### 5. Verify Dataset Path
-
-* Ensure `train-00000-of-00001.parquet` is located alongside the notebook, or update the file path in the first code cell to point to its correct location.
-
-\$1
-
-For each problem, the notebook logs:
-
-* **Prompt:** Math word problem text
-* **Response:** Model's generated answer
-* **Ground Truth:** Correct answer
-* **Correct So Far:** Running count of correct responses
-* **Dataset Index:** Problem number (1–1125)
-
-Monitor **“correct so far”** to assess performance trajectory.
-
 ---
 
 ### Conclusion & Future Work
