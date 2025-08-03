@@ -120,18 +120,11 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-#### 3. Install Dependencies
-
-> **If** there is a `requirements.txt` in the repo:
-
-```bash
-pip install -r requirements.txt
+# Install all necessary dependencies (as used in the notebook)
 ```
-
-> **Otherwise** manually install:
-
-```bash
-pip install dspy-ai numpy pandas jupyter
+!pip install -U dspy
+!pip install datasets
+!pip install torch transformers
 ```
 
 #### 4. Launch Jupyter Notebook
