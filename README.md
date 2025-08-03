@@ -98,62 +98,64 @@ Accuracy = (856 / 1125) * 100 ≈ 76.09%
 
 ### How to Run the Notebook
 
-#### Prerequisites
+To get the notebook up and running, follow these structured steps:
 
-* **Python 3.x**
-* **Jupyter Notebook**
-* **DSPy** (install via `pip install dspy-ai`)
-* **Additional Libraries:**
+#### 1. Clone & Navigate
 
-  ```bash
-  pip install numpy pandas jupyter
-  ```
-* **Dataset File:** Ensure `train-00000-of-00001.parquet` is in the repository or specify its path.
-
-#### Setup Instructions
-
-1. **Clone the Repository**
-
-   ```bash
-   ```
-
+```bash
+# Clone the repository
 git clone <repository-url>
 cd <repository-directory>
+```
 
-````
+#### 2. (Optional) Create a Virtual Environment
 
-2. **Install Dependencies**
+```bash
+# macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### 3. Install Dependencies
+
+> **If** there is a `requirements.txt` in the repo:
+
 ```bash
 pip install -r requirements.txt
-````
-
-*(If no `requirements.txt` exists, install manually as above.)*
-
-3. **Launch Jupyter Notebook**
-
-   ```bash
-   ```
-
-jupyter notebook
-
 ```
-Open **"DSPy FRAMEWORKS (MIPRO & BETTER TOGETHER) .ipynb"** in your browser.
 
-4. **Run Cells**
-   - Execute sequentially by clicking **Run** or pressing **Shift + Enter**.
-   - Verify the dataset file path or adjust as needed.
+> **Otherwise** manually install:
 
----
+```bash
+pip install dspy-ai numpy pandas jupyter
+```
 
-### Interpreting Outputs
+#### 4. Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+* In your browser, open: `DSPy FRAMEWORKS (MIPRO & BETTER TOGETHER) .ipynb`
+* Run all cells in order: select a cell and press **Shift + Enter**.
+
+#### 5. Verify Dataset Path
+
+* Ensure `train-00000-of-00001.parquet` is located alongside the notebook, or update the file path in the first code cell to point to its correct location.
+
+\$1
 
 For each problem, the notebook logs:
 
-- **Prompt:** Math word problem text
-- **Response:** Model's generated answer
-- **Ground Truth:** Correct answer
-- **Correct So Far:** Running count of correct responses
-- **Dataset Index:** Problem number (1–1125)
+* **Prompt:** Math word problem text
+* **Response:** Model's generated answer
+* **Ground Truth:** Correct answer
+* **Correct So Far:** Running count of correct responses
+* **Dataset Index:** Problem number (1–1125)
 
 Monitor **“correct so far”** to assess performance trajectory.
 
@@ -163,10 +165,9 @@ Monitor **“correct so far”** to assess performance trajectory.
 
 This repository demonstrates how DSPy’s MIPRO and BETTER TOGETHER techniques achieve a **76.09%** accuracy on a challenging math word problem dataset. Future improvements include:
 
-- Fine-tuning MIPRO prompt variations for specific problem types.
-- Exploring additional DSPy techniques to boost accuracy.
-- Expanding the dataset with more diverse problem categories.
+* Fine-tuning MIPRO prompt variations for specific problem types.
+* Exploring additional DSPy techniques to boost accuracy.
+* Expanding the dataset with more diverse problem categories.
 
 Feel free to explore the notebook, replicate the results, or adapt the code for your own datasets and tasks!
 
-```
