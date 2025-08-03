@@ -65,7 +65,7 @@ cd your-repo-name
 ### Step 2: Install dependencies
 
 ```bash
-pip install -U dspy
+pip install - dspy
 ```
 
 ### Step 3: Configure your LLM provider
